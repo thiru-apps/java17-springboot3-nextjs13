@@ -1,0 +1,25 @@
+app:
+  name: Backend
+spring:
+  datasource:
+    username: codeboolean
+    url: jdbc:h2:mem:codex
+    driverClassName: org.h2.Driver
+    password: xCodEx
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: qa
